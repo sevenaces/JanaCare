@@ -1,0 +1,175 @@
+.top-button {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+
+.header	{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	border-bottom: 1px solid #DDD;
+	background: #edf5f9;
+	z-index: 99;
+}
+.header-mobile	{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	border-bottom: 1px solid #DDD;
+	background: #edf5f9;
+	z-index: 99;
+}
+
+.nav-bar-mobile {
+	font-size: large !important;
+}
+.what, .who, .how, .contact	{
+	padding-bottom: 20px;
+	border-bottom: 1px solid #DDD;
+}
+
+.why {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #DDD;
+}
+
+.what	{
+	padding-top: 110px;
+}
+
+.contact	{
+	background: #CCC;
+}
+.janacare-logo-home	{
+	margin-top: 8px;
+}
+.on-what	{
+	position: absolute;
+	top: 0px;
+	left: 30px;
+	width: 430px;
+	height: 450px;
+	padding: 10px;
+	color: white;
+}
+
+.what-highlight 	{
+	text-align: center;
+	font-size: 31px;
+	color: white;
+	margin: 3px;
+}
+.who-highlight	{
+	text-align: center;
+	font-size: 24px;
+	font-weight: 100;
+	color: #333;
+}
+
+.page-name p, .page-name-contact p {
+	font-size: 50px !important;
+	color: #666 !important;
+	text-align: right;
+	font-weight: 100;
+	padding-top: 80px;
+}
+.page-name-contact p {
+	padding-top: 20px;
+}
+
+.intro-bg	{
+	background: url('../images/home/intro-bg-1.jpg') no-repeat;
+	height 450px;
+}
+
+.who-name	{
+	font-weight: bold;
+	margin: 0;
+	color: #000 !important;
+}
+
+.how-highlight, .howp, .why-highlight	{
+	font-size: large;
+	background: invisible;
+	text-align: center;
+}
+
+
+.who-desig	{
+ text-align: justify;
+ color: #333 !important;
+}
+
+.who img	{
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+.fadein { position:relative; width:269px; height:230px; left:0px;top: 0px; }
+.fadein img { position:absolute; left:0; top:0; }
+
+.why-img	{
+	height: 400px;
+}
+
+h3	{
+	font-family: 'Arial', sans-serif;
+	font-weight: 400;
+	color: #333;
+}
+
+.right-border, .margin-fix	{
+	border-right: 2px solid #ccc;
+	padding-right: 10px;
+	padding-left: 5px;
+	margin-left: 10px;
+}
+
+.margin-fix	{
+	border: 0;
+}
+#tooltip {
+    position:absolute;
+    z-index:9999;
+    color:#fff;
+    font-size:10px;
+    width:180px;
+     
+}
+#tooltip .tipHeader {
+    height:8px;
+    background:url(../images/tipHeader.gif) no-repeat;
+}
+ 
+/* IE hack */
+*html #tooltip .tipHeader {margin-bottom:-6px;}
+ 
+#tooltip .tipBody {
+    background-color:#000;
+    padding:10px;
+	font-size: small;
+}
+ 
+#tooltip .tipFooter {
+    height:8px;
+    background:url(../images/tipFooter.gif) no-repeat;
+}
+
+.intro-bg {
+    position:relative;
+    height:450px;
+	background: url('../images/home/intro-bg-1.jpg') no-repeat;
+}
+.intro-bg img {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+}
+
+.intro-bg img.active {
+    z-index:10;
+}
+.intro-bg img.last-active {
+    z-index:9;
+}
