@@ -39,7 +39,7 @@
 	}
 	
 	$(function(){
-	$('.full').css('min-height', (window.screen.availHeight) + "px");
+	$('.full').css('min-height', (window.screen.availHeight) - 280 + "px");
     $('.fadein img:gt(0)').hide();
     setInterval(function(){
       $('.fadein :first-child').fadeOut()
@@ -105,19 +105,35 @@
     </script>
 	
 	<script type="text/javascript">
-		var cur = 2;
+		var cur = 1;
 		var max = 5;
-		function slideSwitch() {
-		
-		$('.intro-bg').css("background", "url('./images/home/intro-bg-" + cur + ".jpg') no-repeat");
-		++cur;
-		if(cur ==5)
-			cur = 1;
-	}
 
-	$(function() {
-		setInterval( "slideSwitch()", 5000 );
-	});
+		function slideSwitch() {
+			setController(cur);
+			$('.intro-bg').css("background", "url('./images/home/intro-bg-" + cur++ + ".jpg') no-repeat");
+			if(cur > max)
+				{ cur = 1;}
+		}
+
+		function sslideSwitch(sCur)
+		{
+			setController(max - sCur + 1);
+			$('.intro-bg').css("background", "url('./images/home/intro-bg-" + cur + ".jpg') no-repeat");
+			cur = sCur;
+
+		}
+
+		function setController(sCur)
+		{
+			index = max - sCur + 1;
+			$('.controller a').removeClass('active');
+			$('.controller a:nth-child(0n+' + index + ')').addClass('active');
+		}
+
+		$(function() {
+			$('.controller a:nth-child(0n+5)').addClass('active');
+			setInterval( "slideSwitch()", 10000 );
+		});
 	
 	</script>
 </head>
@@ -181,8 +197,17 @@
 			</div>
 			</div>
 		</div>
-		<br />		
+		<div class="row">
+			<div class="twelve columns controller">
+				<a href="#" onclick="sslideSwitch(1);"></a>
+				<a href="#" onclick="sslideSwitch(2);"></a>
+				<a href="#" onclick="sslideSwitch(3);"></a>
+				<a href="#" onclick="sslideSwitch(4);"></a>
+				<a href="#" onclick="sslideSwitch(5);"></a>
+			</div>
+		</div>
 	</div>
+
 	<div class="container what show-on-phones">
 		<div class="row centered">
 			<div class="twelve columns">
@@ -334,17 +359,18 @@
 	<div class="container contact">
 		<br />
 		<div class="row centered">
-			<div class="four columns"><h3>Clinical Partners</h3>
+			<div class="eight columns"><h3>Clinical Partners</h3>
 			<p><a href="http://www.narayanahospitals.com/" target="_blank">Narayana Hrudayalaya Hospitals</a><br />
 			<a href="http://www.aiims.edu/" target="_blank">All India Institute of Medical Sciences</a></p>
 			</div>
 			
 			<div class="four columns"><h3>Say Hi!</h3>
+			<p><b>Technology Business Incubator</b><br />Narayana Hrudayalaya Health City<br/>Bangalore, India</p>
 			<p><a href="mailto:contact@janacare.com">contact@janacare.com</a>
 			</p>
 			</div>
 			
-			<div class="four columns"><h3><a href="http://g.co/maps/5ukd4" target="_blank"><img src="./images/Google-Maps-icon.png"></a>Drop in</h3><p><b>Technology Business Incubator</b><br />Narayana Hrudayalaya Health City<br/>Bangalore, India</p></div>
+			
 		</div>
 	</div>
 </body>
